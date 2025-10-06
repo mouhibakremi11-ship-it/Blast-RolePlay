@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="border.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blast Rp</title>
+
+  <style>
+
+    body {
+      background-color: rgb(145, 39, 39);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    h1 {
+      color: darkred;
+      text-align: center;
+    }
+
+
+    .main-logo {
+      display: block;
+      margin: 30px auto;
+    }
+
+
+    table {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    caption {
+      color: gold;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    progress {
+      width: 100px;
+      height: 12px;
+      border-radius: 10px;
+    }
+
+
+    .sidebar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 100;
+    }
+
+
+    .menu-toggle {
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .menu-toggle:hover {
+      background-color: #cc0000;
+    }
+
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+
+    .menu a {
+      background-color: #400000;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+      width: 150px;
+    }
+
+    .menu a:hover {
+      background-color: #660000;
+      transform: translateX(5px);
+    }
+
+
+    .sidebar.active .menu {
+      display: flex;
+    }
+
+
+    .sidebar img {
+      width: 80px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="sidebar">
+    <button class="menu-toggle">☰</button>
+    <div class="menu">
+      <img src="blast logo.png" alt="">
+      <a href="admin cmd.html">General Rules</a>
+      <a href="Ban rules.html">Ban Rules</a>
+      <a href="warn rules.html">Warn Rules</a>
+      <a href="kick rules.html">Kick Rules</a>
+      <a href="Donation.html">Donation-Shop</a>
+    </div>
+  </div>
+
+
+
+ 
+  <center>
+    <img src="logo.png" alt="Blast Logo" width="1000" height="400" class="main-logo">
+    <h1 style="color: chocolate;">Blast-RP--Official WebCite</h1>
+    <img src="gif blast.gif" alt="" width="150">
+
+    
+      <h1 style="font-style: italic; color: darkred;">Blast RolePlay</h1>
+
+<style>
+  :root{
+    /* عدل عدد الصور هنا */
+    --slides: 4;
+    /* مدة عرض كل صورة */
+    --per-slide: 4s;
+    /* المدة الكاملة للدورة = --slides × --per-slide */
+    --total-duration: calc(var(--slides) * var(--per-slide));
+  }
+
+  *{box-sizing:border-box}
+  body{display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#111}
+
+  .slider{
+    width:90%;
+    max-width:800px;
+    aspect-ratio:16/9;
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  }
+
+  .slides{
+    position:relative;
+    width:100%;
+    height:100%;
+  }
+
+  .slides img{
+    position:absolute;
+    inset:0;              /* top:0; right:0; bottom:0; left:0 */
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    /* كل صورة تعمل نفس الانيميشن بدورة كاملة، لكن بتأخير مختلف */
+    animation: fade var(--total-duration) linear infinite;
+  }
+
+  /* نعمل تأخيرات لكل صورة: nth-child(1) = 0, (2) = 1*--per-slide, (3) = 2*--per-slide ... */
+  .slides img:nth-child(1){ animation-delay: calc(0 * var(--per-slide)); }
+  .slides img:nth-child(2){ animation-delay: calc(1 * var(--per-slide)); }
+  .slides img:nth-child(3){ animation-delay: calc(2 * var(--per-slide)); }
+  .slides img:nth-child(4){ animation-delay: calc(3 * var(--per-slide)); }
+  /* لو عندك أكثر من 4 صور، ضيف nth-child(5/6/...) بنفس النمط */
+
+  /* ال keyframes: الصورة تكون مرئية في بداية دورتها ثم تختفي */
+  @keyframes fade{
+    0%   { opacity:1; transform: scale(1.02); }
+    20%  { opacity:1; transform: scale(1); } /* تبقى ظاهرة لبعض الوقت */
+    25%  { opacity:0; transform: scale(1); } /* تبدأ تختفي */
+    100% { opacity:0; }
+  }
+
+  /* لمسة صغيرة: نقاط تنبيه (اختياري) */
+  .dots{
+    position:absolute;
+    left:50%;
+    bottom:10px;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+    z-index:3;
+  }
+  .dot{
+    width:10px;height:10px;border-radius:50%;
+    background:rgba(255,255,255,0.45);
+    box-shadow:0 1px 4px rgba(0,0,0,0.5);
+  }
+</style>
+</head>
+<body>
+
+<div class="slider" aria-label="سلايدر صور">
+  <div class="slides">
+    <!-- حط روابط صورك هنا -->
+    <img src="https://cdn.discordapp.com/attachments/924016995572273223/1243210659232092160/31c9918d-9ffe-4b7d-bd1f-6d95bfaf69db.jpg?ex=68e47c66&is=68e32ae6&hm=bb9be9720e4e8177d838bad75ca7e5508b48c5b959867302e20f12dacb869bd0&" alt="صورة 1">
+    <img src="https://media.discordapp.net/attachments/924016995572273223/1313495091725467648/Messenger_creation_D5C60898-8323-49C7-8F34-4EA1117C4FAE.png?ex=68e46ae1&is=68e31961&hm=5cade79d8f95882d7780e865049b143bec0b69afb35eea561bf2c4bdd3cbae3c&=&format=webp&quality=lossless&width=480&height=617" alt="صورة 2">
+    <img src="https://cdn1.epicgames.com/offer/3262906d93334603b399e106492b1217/EGS_GrandTheftAutoSanAndreasTheDefinitiveEdition_RockstarGames_S1_2560x1440-3daa3396c39d5310e071d9093689fdde" alt="صورة 3">
+    <img src="https://i.ytimg.com/vi/_VN_zlzjrLI/hqdefault.jpg" alt="صورة 4">
+  </div>
+
+  <!-- نقاط بسيطة فقط للواجهة (اختياري) -->
+  <div class="dots" aria-hidden="true">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<p></p>
+<img src="blasts12.gif" alt="" width="800" height="350">
+
+
+
+<table>
+  <tr>
+    <td><img src="yutube5.png" alt="" width="50"></td>
+    <td>:PRADO_برادو</td>
+  </tr>
+  <tr>
+    <th><img src="disc2.jpg" alt="" width="50"></th>
+    <td>:DISCORD.GG/BLASTRP</td>
+    </tr>
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+ 
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.sidebar').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
